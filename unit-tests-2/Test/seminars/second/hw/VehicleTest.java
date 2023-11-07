@@ -28,23 +28,27 @@ class VehicleTest {
         assertEquals(4, car.getNumWheels());
     }
 
+    // Проверить, что объект Motorcycle создается с 2-мя колесами.
     @Test
     void testMotorcycleHaveTwoWheels() {
         assertEquals(2, motorcycle.getNumWheels());
     }
 
+    // Проверить, что объект Car развивает скорость 60 в режиме тестового вождения
     @Test
     void checkSpeedCarInTestDrive() {
         car.testDrive();
         assertEquals(60, car.getSpeed());
     }
 
+    // Проверить, что объект Motorcycle развивает скорость 75 в режиме тестового вождения
     @Test
     void checkSpeedMotorcycleInTestDrive() {
         motorcycle.testDrive();
         assertEquals(75, motorcycle.getSpeed());
     }
 
+    // Проверить, что в режиме парковки машина останавливается
     @Test
     void testFullStopInCarBeforeTestDrive() {
         car.testDrive();
@@ -52,6 +56,8 @@ class VehicleTest {
         car.park();
         assertEquals(0, car.getSpeed());
     }
+
+    // Проверить, что в режиме парковки мотоцикл останавливается
     @Test
     void testFullStopInMotorcycleBeforeTestDrive() {
         motorcycle.testDrive();
