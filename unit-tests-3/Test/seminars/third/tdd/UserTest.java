@@ -8,23 +8,22 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class UserTest {
-    MoodAnalyser moodAnalyser;
+    User user;
+
     @BeforeEach
-    void setUP(){
-        moodAnalyser = new MoodAnalyser();
+    void setUP() {
+        user = new User("login", "password");
     }
     @Test
-    void testUserGoodMood(){
-        assertThat(moodAnalyser.analyseMood("good day")).isEqualTo("happy");
+    void correctLoginAndPassword(){
+        assertTrue(user.authenticate("login", "password"));
     }
-
     @Test
-    void testUserBadMood(){
-        assertThat(moodAnalyser.analyseMood("bad day")).isEqualTo("bad");
+    void correctOnlyLoginNotPassword(){
+        assertFalse(user.authenticate("login", "error"));
     }
-
     @Test
-    void testUserMood(){
-        assertThat(moodAnalyser.analyseMood("test")).isEqualTo("so-so");
+    void correctNotLoginOnlyPassword(){
+        assertFalse(user.authenticate("error", "password"));
     }
 }
