@@ -5,9 +5,6 @@ public class Book {
     private String title;
     private String author;
 
-    public Book(String id) {
-        this.id = id;
-    }
 
     public Book(String id, String title, String author) {
         this.id = id;
