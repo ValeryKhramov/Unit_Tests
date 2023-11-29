@@ -28,7 +28,7 @@
 
 Решение:
 
-1. Код программы -
-1. Код тестов - 
+1. Код программы - https://github.com/ValeryKhramov/Unit_Tests/blob/main/unit-tests-6/Homework6/List.java
+1. Код тестов - https://github.com/ValeryKhramov/Unit_Tests/blob/main/unit-tests-6/Homework6/TestAvgList.java
 1. Покрытие тестами – 100% согласно отчету Coverage
 1. Тестами покрыты все три сценария работы приложения: если среднее арифметическое первого списка больше, если среднее арифметическое второго списка больше, если средние арифметические обоих списков равны.
